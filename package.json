@@ -18,5 +18,8 @@
     "react-twitter-widgets": "^1.4.0",
     "socket.io": "^2.0.3",
     "twitter": "^1.7.1"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0"
   }
 }
