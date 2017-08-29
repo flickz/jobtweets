@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #e6ecf0;
+}
+nav{
+  background-color: #fff;
+  border-bottom-color: #55acee;
+}
+.brand-logo{
+  color: #55acee !important;
+}
+.preloader-wrapper{
+  margin-top: 80px;
+}
+.circle{
+  color: #55acee;
+}

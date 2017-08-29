@@ -1,0 +1,22 @@
+{
+  "name": "jobtweets",
+  "version": "1.0.0",
+  "description": "\"Find realtime job tweets\"",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node server.js",
+    "client": "node start-client.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.15.4",
+    "lodash": "^4.17.4",
+    "react-twitter-widgets": "^1.4.0",
+    "socket.io": "^2.0.3",
+    "twitter": "^1.7.1"
+  }
+}
