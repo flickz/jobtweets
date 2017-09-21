@@ -8,5 +8,4 @@ stream.on('error', (error)=>{
 // stream.on('tweet', (event)=>{
 //   console.log(event.text);
 // })
-
 export default stream;
