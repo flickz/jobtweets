@@ -1,5 +1,5 @@
 import io from 'socket.io-client';
-const stream =  io('https://jobtweets/');
+const stream =  io('https://localhost', {secure: true});
 
 stream.on('error', (error)=>{
   console.log("Error occoured..");
