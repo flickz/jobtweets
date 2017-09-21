@@ -4,11 +4,13 @@ const Twitter = require('twitter');
 const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
+const cors = require('cors');
 
 server.listen(process.env.PORT||8000, ()=>{console.log("Server listening...")});
 
 // Express only serves static assets in production
 if (process.env.NODE_ENV === 'production') {
+  app.use(cors());
   app.use(express.static('client/build'));
 }
 
@@ -32,7 +34,7 @@ stream.on('error', (error)=>{
 
 io.on('connection', (socket)=>{
   socket.on('error', (error)=>{
-    throw error;
+    console.error("New socket Error", error);
   });
   
   stream.on('data', function(event) {
