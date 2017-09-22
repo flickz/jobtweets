@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const Twitter = require('twitter');
 const app = express();
-const server = require('http').Server(app);
+const server = require('https').Server(app);
 const io = require('socket.io')(server);
 const cors = require('cors');
 
@@ -37,7 +37,7 @@ io.on('connection', (socket)=>{
     console.error("New socket Error", error);
   });
   
-  stream.on('data', function(event) {
-    socket.emit('tweet', event); 
-  });
+  //stream.on('data', function(event) {
+    socket.emit('tweet', 'Hello There'); 
+  //});
 });
