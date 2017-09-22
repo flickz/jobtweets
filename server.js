@@ -6,7 +6,7 @@ const server = require('https').Server(app);
 const io = require('socket.io')(server);
 const cors = require('cors');
 
-server.listen(process.env.PORT||8000, ()=>{console.log("Server listening...")});
+server.listen(process.env.PORT||8080, ()=>{console.log("Server listening...")});
 
 // Express only serves static assets in production
 if (process.env.NODE_ENV === 'production') {
