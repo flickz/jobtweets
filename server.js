@@ -37,7 +37,7 @@ io.on('connection', (socket)=>{
     console.error("New socket Error", error);
   });
   
-  //stream.on('data', function(event) {
-    socket.emit('tweet', 'Hello There'); 
-  //});
+  stream.on('data', function(event) {
+    socket.emit('tweet', event); 
+  });
 });
