@@ -19,6 +19,7 @@ Find Real time job tweets! - Live at - https://jobtweets.net
 
 1. Cache tweets for 24 hrs 
 2. Filter tweets base on location
+3. Filter tweets base on Job Spec
 
 Don't forget to star and contribute!
 
