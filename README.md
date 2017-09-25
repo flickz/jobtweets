@@ -21,5 +21,7 @@ Find Real time job tweets! - Live at - https://jobtweets.net
 2. Filter tweets base on location
 3. Filter tweets base on Job Spec
 
+All commit in development branch. 
+
 Don't forget to star and contribute!
 
