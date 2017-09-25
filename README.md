@@ -12,7 +12,7 @@ Find Real time job tweets! - Live at - https://jobtweets.net
     https://apps.twitter.com/app/new
     Then you'll be taken to a page containing Consumer Key & Consumer Secret.
     
-5. In the main directory, open the .env file and enter your twitter api credentials. 
+5. In the main directory, Rename the .env-dev file to .env and enter your twitter api credentials. 
 6. To start the both servers (Backend and Client dev server), run `npm run dev` from the main server directory. 
 
 ### Urgent ToDo
