@@ -13,18 +13,19 @@ class Tweets extends Component{
     if(this.props.tweets.length === 0){
       return (<Preloader />); 
     }
-    return (<EmbededTweet tweets={this.props.tweets} />);  
+    return (<EmbededTweet tweets={this.props.tweets} filters={this.props.filters} />);  
   }
 }
 
-function mapStateToProps({tweets}){
-  return {tweets}
+function mapStateToProps({tweets, filters}){
+  return {tweets, filters};
 }
+
 function mapDispatchToProps(dispatch){
   return{
     loadTweetStream: ()=>{
       dispatch(loadTweetStream());
-    }
+    } 
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Tweets);

@@ -1,19 +1,19 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background-color: #e6ecf0;
+body{
+  background: #e6ecf0;
 }
-nav{
-  background-color: #fff;
-  border-bottom-color: #55acee;
+a:hover, a:active{
+  text-decoration: none;
+  color: #55acee;
+  outline: 0;
 }
-.brand-logo{
-  color: #55acee !important;
+.tweet-section{
+  margin-top: 25px;
 }
-.preloader-wrapper{
+.spinner{
+  color: #55acee;
+  text-align: center;
   margin-top: 80px;
 }
-.circle{
-  color: #55acee;
+.spinner i{
+  font-size: 32px;
 }

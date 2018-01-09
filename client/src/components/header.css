@@ -1,0 +1,17 @@
+.nav-wrapper{
+  height: 60px;
+  background-color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);   
+}
+nav{
+  width: 100%;
+  text-align: center;
+}
+ a.logo{
+  text-align: center !important;
+  display: inline-block;
+  text-decoration: none;
+  color: #55acee;
+  font-size: 2.1rem;
+  font-weight: 400;
+}

@@ -1,1 +1,6 @@
 /node_modules
+.env
+test.js
+pos.js
+search.js
+/client/build

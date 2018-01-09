@@ -5,6 +5,7 @@ const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 const cors = require('cors');
+const {BayesClassifier} = require('natural');
 
 server.listen(process.env.PORT||8080, ()=>{console.log("Server listening...")});
 
@@ -22,14 +23,14 @@ const client = new Twitter({
 }); 
 
 const searchOptions = {
-  track: 'we are hiring, looking for interns, we are employing, vacancy!, we have job available',
+  track:'we are hiring, looking for interns, vacancy, we have job available',
   filter_level: 'low'
 }
 
 const stream = client.stream('statuses/filter', searchOptions);
 
 stream.on('error', (error)=>{
-  console.log("Twitter error occoured..", error);
+  console.error("Twitter error occoured..", error);
 });
 
 io.on('connection', (socket)=>{
@@ -37,7 +38,46 @@ io.on('connection', (socket)=>{
     console.error("New socket Error", error);
   });
   
-  stream.on('data', function(event) {
-    socket.emit('tweet', event); 
+  stream.on('data', function(data) {
+    let tweet = {}
+    if(data.lang === "en"){
+      classifyTweet(data.text).then((classifications)=>{
+        tweet['id'] = data.id_str;
+        tweet['classifications'] = classifications;      
+        tweet['text'] = data.text;
+        socket.emit('tweet', tweet);          
+      }).catch(err=>console.error(err));;
+    }
   });
 });
+
+stream.on('data', function(data) {
+  let tweet = {}
+  if(data.lang === "en"){
+    classifyTweet(data.text).then((classifications)=>{
+      tweet['id'] = data.id_str;
+      tweet['classifications'] = classifications;      
+      tweet['text'] = data.text;
+      console.log(tweet);
+      //socket.emit('tweet', tweet);          
+    }).catch(err=>console.error(err));;
+  }
+});
+
+function classifyTweet(text){
+  return new Promise((resolve, reject)=>{
+    BayesClassifier.load('classifier.json', null, (err, classifier)=>{
+      if(err)reject(err);
+      text = removeHash(text);
+      let classifications = []
+      let result = classifier.getClassifications(text);
+      classifications.push(result[0].label); classifications.push(result[1].label)
+      resolve(classifications);
+    });
+  })
+}
+
+const removeHash = (word)=>{
+   return word.replace(/#|RT|rt/g, '');
+}
+
