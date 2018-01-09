@@ -16,8 +16,8 @@
     "cors": "^2.8.4",
     "dotenv": "^4.0.0",
     "express": "^4.15.4",
-    "firebase-functions": "^0.6.3",
     "lodash": "^4.17.4",
+    "natural": "^0.5.4",
     "react-twitter-widgets": "^1.4.0",
     "socket.io": "^2.0.3",
     "twitter": "^1.7.1"

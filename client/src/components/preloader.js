@@ -1,17 +1,11 @@
 import React from 'react';
-
+import './preloader.css';
 export default ()=>{
   return(
-    <div className="container">
-      <div className="row">
-        <div className="col s8 offset-s5">
-          <div className="preloader-wrapper big active">
-            <div className="spinner-layer spinner-blue-only">
-              <div className="circle-clipper left">
-                <div className="circle"></div>
-              </div>
-            </div>
-          </div>
+    <div className="col-sm-6 col-xs-12 col-md-6 offset-md-1">
+      <div className="tweet-section">
+        <div className="spinner">
+          <i className="fa fa-circle-o-notch fa-spin"></i>
         </div>
       </div>
     </div>

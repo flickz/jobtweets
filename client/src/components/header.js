@@ -1,13 +1,16 @@
 import React from 'react';
+import './header.css';
 
 export default ()=>{
   return (
-    <div>
-      <nav>
-          <div className="nav-wrapper">
-            <a href="/" className="brand-logo center">Job Tweets</a>
-          </div>
-        </nav>
-    </div>
+    <div className="nav-wrapper container-fluid">
+      <div className="container">
+        <div className="row">
+          <nav>
+            <a href="#"  className="logo">Job Tweets</a>
+          </nav>
+        </div>
+      </div>
+  </div>
   );
 }

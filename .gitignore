@@ -1,2 +1,10 @@
 /node_modules
+<<<<<<< HEAD
 .env
+=======
+.env
+test.js
+pos.js
+search.js
+/client/build
+>>>>>>> chrome-ext

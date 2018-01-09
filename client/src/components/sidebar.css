@@ -1,0 +1,14 @@
+.filter-sidebar{
+  background: #fff;
+  margin-top: 25px;
+  padding: 5px;
+  border: 1px solid #e1e8ed;
+}
+.filter-sidebar p{
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+.filter-form{
+  margin-left: 10px;
+}

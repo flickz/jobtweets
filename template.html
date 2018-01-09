@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Real Time Job Tweets</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <style>
+      body{
+        background: #e6ecf0;
+      }
+      a:hover, a:active{
+        text-decoration: none;
+        color: #55acee;
+        outline: 0;
+      }
+      .nav-wrapper{
+        height: 60px;
+        background-color: #fff;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);   
+      }
+      nav{
+        width: 100%;
+        text-align: center;
+      }
+       a.logo{
+        text-align: center !important;
+        display: inline-block;
+        text-decoration: none;
+        color: #55acee;
+        font-size: 2.1rem;
+        font-weight: 400;
+      }
+      .filter-sidebar{
+        background: #fff;
+        margin-top: 25px;
+        padding: 5px;
+        border: 1px solid #e1e8ed;
+      }
+      .filter-sidebar p{
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+      }
+      .filter-form{
+        margin-left: 10px;
+      }
+      .tweet-section{
+        margin-top: 25px;
+      }
+      .spinner{
+        color: #55acee;
+        text-align: center;
+        margin-top: 80px;
+      }
+      .spinner i{
+        font-size: 32px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav-wrapper container-fluid">
+      <div class="container">
+        <div class="row">
+          <nav>
+            <a href="#"  class="logo">Job Tweets</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 col-xs-12 col-md-4">
+          <aside class="filter-sidebar">
+            <p>Filter</p>
+            <form class="filter-form" action="">
+              <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="">
+                    Agriculture & Farming
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="">
+                    Art & Design
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="">
+                    Banking & Finance
+                  </label>
+                 </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="">
+                    Business Development & Management
+                  </label>
+                 </div>
+                 <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="">
+                    Content Writing
+                  </label>
+                 </div>
+                 <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="">
+                      Customer Service
+                    </label>
+                   </div>
+                   <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        Education & Teaching
+                      </label>
+                     </div>
+                   <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="">
+                      Engineering
+                    </label>
+                   </div>
+                   <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        Health Care
+                      </label>
+                     </div>
+
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="">
+                      Human Resources
+                    </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        Intership & College
+                      </label>
+                  </div>
+                  <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        Legal
+                      </label>
+                    </div>
+                  <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        Manufacturing & Production
+                      </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="">
+                      Music
+                    </label>
+                  </div>
+                  <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        Office
+                      </label>
+                    </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="">
+                    Real Estate
+                  </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="">
+                      Restaurant & Food Service
+                    </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="">
+                    Research
+                  </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" value="">
+                      Sales & Marketing
+                    </label>
+                  </div>
+                  <div class="form-check">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        Software Development
+                      </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox" value="">
+                          System Admin
+                        </label>
+                      </div>
+                      <div class="form-check">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" value="">
+                            Transportation & Logistics
+                          </label>
+                        </div>
+            </form>
+          </aside>
+        </div>
+        <div class="col-sm-6 col-xs-12 col-md-6 offset-md-1">
+          <div class="tweet-section">
+            <div class="spinner">
+              <i class="fa fa-circle-o-notch fa-spin"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>

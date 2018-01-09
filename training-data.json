@@ -1,0 +1,90 @@
+[
+  {
+    "field": "SD",
+    "keywords": ["iOS",".NET","App", "Angular", "VueJS" ,"Architect","Android","ActionScript","ActiveX","Algol","Algorithm","API","Applet","ASP","ASPI","Assembler","Assembly","Babel","Backend", "Back-end","C","C sharp","C++","C#","Clojure","Compiler","CSS","Dart","Django","ECMAScript","F#","Front-end","Frontend", "Full-stack", "Full stack", "Go language","Haskell","HTML","Java","JavaScript","LISP","Node.js","PHP","Python","React","React Native","Ruby","Rust","Scala","Software","engineer","SQL","Web", "Developer"]
+  },
+  {
+    "field": "SM",
+    "keywords": ["Advertising","B2B","B2C","BANT","Branding","Brand", "Data entry","Field Sales","Junior Sales Rep", "SEO" ,"Social Seller", "Digital Marketing"]
+  },
+  {
+    "field": "BDM",
+    "keywords":["Strategist","Product", "Manager","Quality management","Business Developer", "Business", "Operation"]
+  },
+  {
+    "field": "HC",
+    "keywords": ["Nurse", "Doctor", "Hospital", "Health Care", "Specialist", "Therapist", "Surgical"]
+  },
+  {
+    "field": "IC",
+    "keywords": ["Internship", "IT", "SIWES", "Intern", "Interns", "College"]
+  },
+  {
+    "field": "RS",
+    "keywords": ["Analysis","Data Mining","Research","Questionnaire","Statistics","Researchers"]
+  },
+  {
+    "field": "HR",
+    "keywords":["Human", "Resources", "Director", "HR"]
+  },
+  {
+    "field": "HT",
+    "keywords": ["Lecturer", "interventionist", "University", "Trainer", "Training", "Teacher", "Teaching", "Lecturing", "Instructor", "Coach", "Course", "Courses", "Certificate"]
+  },
+  {
+    "field": "MP",
+    "keywords": ["Manufacturing", "Plants", "Production", "Operator", "Machine"]
+  },
+  {
+    "field": "RE",
+    "keywords": ["Agent", "Estate", "Real"]
+  },
+  {
+    "field": "AF",
+    "keywords": ["Agriculture", "Farming", "Animal", "Haverster", "Tractor", "Plants", "Fishing"]
+  },
+  {
+    "field": "TL",
+    "keywords": ["Driver", "Driving", "Uber", "Lyft", "Pilot", "Truck", "Delivery", "Logistics", "Transportation", "Freight Broker"]
+  },
+  {
+    "field": "AD",
+    "keywords": ["Art", "Graphic Designer", "Illustrator", "UI", "UX", "Web Designer", "Responsive", "Design", "3D Artist", "Animator", "Caricature", "Animation", "Portraits", "Cartoon", "Photoshop"]
+  },
+  {
+    "field": "CW",
+    "keywords": ["Writing", "Blogs", "Editor", "Photoshop", "Content Writer", "Digital Media Creation", "Photojournalist", "Journalist"]
+  },
+  {
+    "field": "SA",
+    "keywords":["Linux", "System", "Administrator", "Systems", "Cloud Specialist", "Azure", "Development Operation", "AWS", "Azure", "Linode"]
+  },
+  {
+    "field": "MU",
+    "keywords": ["Composer", "Musician", "Music Studio", "Producer", "Video Director", "Song Writer"]
+  },
+  {
+    "field": "OF",
+    "keywords": ["Admin", "Executive", "Assistant", "Excel", "Receptionist", "Recruiter", "Websphere", "Office"]
+  },
+  {
+    "field": "CS",
+    "keywords": ["Customer Service", "Care", "Associate", "Representative"]
+  },
+  {
+    "field": "RF",
+    "keywords": ["Cook", "Restaurant", "Banquet Server", "Dishwasher", "Catering Manager", "Benihana Chef", "Kitchen Manager", "Sous", "Executive Chef", "Sushi", "Dietary","Event", "Waiter Waitress"]
+  }, 
+  {
+    "field": "BF",
+    "keywords": ["Banker", "Loan Officer", "Teller", "Customer", "Loan Processor", "Mortage Originator", "Business Analyst", "Finance Manager", "Auditor", "Tax Specialist"]
+  },
+  {
+    "field": "LG",
+    "keywords": ["Legal", "Commercial Finance Attorney", "Litigation Attorney", "Executive Assistant", "Clerk", "Paralegal"]
+  },
+  {
+    "field": "EG",
+    "keywords": ["Electrical", "engineer", "Mechanical","Engineering", "Computer", "Physics", "Chemical", "Electronics"]
+  }
+] 
