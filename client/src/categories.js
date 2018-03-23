@@ -1,90 +1,90 @@
 export const categoriesData = [
-  { 
-    acronym:"AF", 
-    fullMeaning:"Agriculture & Farming"
+  {
+    acronym: 'AF',
+    fullMeaning: 'Agriculture & Farming'
   },
   {
-    acronym: "AD", 
-    fullMeaning:"Art & Design"
-  },
-  { 
-    acronym: "BF",
-    fullMeaning: "Banking & Finance"
+    acronym: 'AD',
+    fullMeaning: 'Art & Design'
   },
   {
-    acronym:"BDM",
-    fullMeaning: "Business Development & Management"
+    acronym: 'BF',
+    fullMeaning: 'Banking & Finance'
   },
   {
-    acronym: "CW", 
-    fullMeaning: "Content Writing"
+    acronym: 'BDM',
+    fullMeaning: 'Business Development & Management'
   },
   {
-    acronym:"CS",
-    fullMeaning: "Customer Services"
+    acronym: 'CW',
+    fullMeaning: 'Content Writing'
   },
   {
-    acronym: "ET",
-    fullMeaning: "Education & Teaching"
-  },
-  { 
-    acronym: "EG", 
-    fullMeaning: "Engineering"
+    acronym: 'CS',
+    fullMeaning: 'Customer Services'
   },
   {
-    acronym:"HC",
-    fullMeaning: "Health Care"
-  },
-  { 
-    acronym: "HR",
-    fullMeaning: "Human Resources"
+    acronym: 'ET',
+    fullMeaning: 'Education & Teaching'
   },
   {
-    acronym:"IC",
-    fullMeaning: "Internship & College"
+    acronym: 'EG',
+    fullMeaning: 'Engineering'
   },
   {
-    acronym: "LG",
-    fullMeaning: "Legal"
+    acronym: 'HC',
+    fullMeaning: 'Health Care'
   },
   {
-    acronym:"MP",
-    fullMeaning: "Manufacturing & Production"
+    acronym: 'HR',
+    fullMeaning: 'Human Resources'
   },
   {
-    acronym:"MU",
-    fullMeaning: "Music"
+    acronym: 'IC',
+    fullMeaning: 'Internship & College'
   },
   {
-    acronym:"OF",
-    fullMeaning: "Office"
+    acronym: 'LG',
+    fullMeaning: 'Legal'
   },
   {
-    acronym: "RE",
-    fullMeaning: "Real Estate"
+    acronym: 'MP',
+    fullMeaning: 'Manufacturing & Production'
   },
   {
-    acronym: "RF",
-    fullMeaning: "Restaurant & Food Service"
+    acronym: 'MU',
+    fullMeaning: 'Music'
   },
   {
-    acronym: "RS",
-    fullMeaning: "Research"
+    acronym: 'OF',
+    fullMeaning: 'Office'
   },
   {
-    acronym:"SM",
-    fullMeaning: "Sales & Marketing"
+    acronym: 'RE',
+    fullMeaning: 'Real Estate'
   },
   {
-    acronym: "SD",
-    fullMeaning:  "Software Development"
-  },
-  { 
-    acronym:"SA",
-    fullMeaning: "System Admin"
+    acronym: 'RF',
+    fullMeaning: 'Restaurant & Food Service'
   },
   {
-    acronym: "TL",
-    fullMeaning: "Transportation & Logistics"
+    acronym: 'RS',
+    fullMeaning: 'Research'
+  },
+  {
+    acronym: 'SM',
+    fullMeaning: 'Sales & Marketing'
+  },
+  {
+    acronym: 'SD',
+    fullMeaning: 'Software Development'
+  },
+  {
+    acronym: 'SA',
+    fullMeaning: 'System Admin'
+  },
+  {
+    acronym: 'TL',
+    fullMeaning: 'Transportation & Logistics'
   }
 ]

@@ -1,23 +1,23 @@
-import React, { Component } from 'react';
-import Tweets from './containers/tweets';
-import Header from './components/header';
-import Categories from './containers/categories';
-import './App.css';
+import React, { Component } from 'react'
+import Tweets from './containers/tweets'
+import Header from './components/header'
+import Categories from './containers/categories'
+import './App.css'
 
 class App extends Component {
-  render() {
+  render () {
     return (
       <div>
-        <Header/> 
+        <Header />
         <div className="container">
           <div className="row">
             <Categories />
-            <Tweets/>
+            <Tweets />
           </div>
-        </div>    
+        </div>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

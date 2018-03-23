@@ -8,7 +8,9 @@
     "start": "node server.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "node server.js",
-    "client": "node start-client.js"
+    "client": "node start-client.js",
+    "lint": "eslint \"**/*.js\" \"**/*.jsx\"",
+    "lint:fix": "eslint \"**/*.js\" \"**/*.jsx\" --fix"
   },
   "author": "",
   "license": "ISC",
@@ -18,16 +20,19 @@
     "express": "^4.15.4",
     "lodash": "^4.17.4",
     "natural": "^0.5.4",
-    "react-twitter-widgets": "^1.4.0",
     "socket.io": "^2.0.3",
     "twitter": "^1.7.1"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.2",
     "concurrently": "^3.5.0",
+    "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
+    "eslint-config-standard-react": "^6.0.0",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-react": "^7.7.0",
     "eslint-plugin-standard": "^3.0.1"
   }
 }

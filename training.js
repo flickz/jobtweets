@@ -1,39 +1,32 @@
-const {LogisticRegressionClassifier, BayesClassifier} = require('natural');
-const {readFileSync} = require('fs');
-const {join} = require('lodash');
+const {BayesClassifier} = require('natural')
+const {readFileSync} = require('fs')
+const {join} = require('lodash')
 
-const classifier = new BayesClassifier();
+const classifier = new BayesClassifier()
 
-function train(){
-  var data = readFileSync('training-data.json', 'utf-8');
-  data = JSON.parse(data);
-  
-  for(let i =0; i<data.length; i++){
-    //The keywords is an array but natural classifier works better with a string
-    //so keywords are turned to string of text.
+function train () {
+  var data = readFileSync('training-data.json', 'utf-8')
+  data = JSON.parse(data)
+
+  for (let i = 0; i < data.length; i++) {
+    // The keywords is an array but natural classifier works better with a string
+    // so keywords are turned to string of text.
     let text = join(data[i].keywords, ',')
-    classifier.addDocument(text, data[i].field);
+    classifier.addDocument(text, data[i].field)
   }
 }
 
-train();
+train()
 
 classifier.events.on('trainedWithDocument', function (obj) {
-  //console.log(obj);
-});
+  // console.log(obj);
+})
 
+classifier.train()
 
-classifier.train();
-
-var classificat = classifier.getClassifications("RT @rbanks: I\'m looking for two design interns for the summer to work at @MSFTResearchCam. One will focus on UX, working on")
-
-console.log(classificat);
-
-classifier.save('classifier.json', (err, classifier)=>{
-  if(err) throw err;
-
-});
-
+classifier.save('classifier.json', (err, classifier) => {
+  if (err) throw err
+})
 
 // function classifyTweet(text){
 //   return new Promise((resolve, reject)=>{
