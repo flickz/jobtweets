@@ -1,0 +1,19 @@
+.preloader-wrapper {
+  margin-top: 30px;
+  left:50%;
+}
+.circle {
+  color: #55acee;
+}
+
+.content-loader {
+  background: #fff;
+  width: 68%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid rgb(225, 232, 237);
+  border-radius: 5px;
+}
+
+/* .fetching-spinner i {
+} */

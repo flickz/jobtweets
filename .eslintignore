@@ -1,3 +1,5 @@
 node_modules/
 client/node_modules
 client/build/
+client/package.json
+client/package-lock.json
