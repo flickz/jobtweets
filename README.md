@@ -1,5 +1,5 @@
 # Job Tweets
-Find Real time job tweets! - Live at - https://jobtweets.net
+Find Real time job tweets!
 
 ## Getting Started
 
