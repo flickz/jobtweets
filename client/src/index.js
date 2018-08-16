@@ -1,19 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {createStore, applyMiddleware} from 'redux'
-import {Provider} from 'react-redux'
-import thunk from 'redux-thunk'
-import './index.css'
-import jobTweets from './reducers'
-import App from './App'
+import './components/styles/index.css'
+import App from './components/App'
 import registerServiceWorker from './registerServiceWorker'
 
-const store = createStore(jobTweets, applyMiddleware(thunk))
-
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+    <App />,
   document.getElementById('root'))
 
 registerServiceWorker()

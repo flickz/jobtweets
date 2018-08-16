@@ -1,6 +1,6 @@
 import React from 'react'
-import './sidebar.css'
-import {categoriesData} from '../categories'
+import './styles/sidebar.css'
+import {categoriesData} from '../util/categories'
 
 export default ({onCheck}) => {
   const categories = categoriesData.map((category, index) => {
@@ -15,7 +15,7 @@ export default ({onCheck}) => {
   })
 
   return (
-    <div className="col-sm-3 col-xs-12 col-md-3">
+    <div className="col-sm-4 col-xs-12 col-md-4">
       <aside className="filter-sidebar">
         <p>Filter</p>
         <form className="filter-form" action="">

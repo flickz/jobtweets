@@ -1,19 +1,27 @@
 require('dotenv').config()
+const util = require('util')
 const express = require('express')
+const logger = require('morgan')
 const Twitter = require('twitter')
-const app = express()
-const server = require('http').Server(app)
-const io = require('socket.io')(server)
 const cors = require('cors')
-const {BayesClassifier} = require('natural')
+const socket = require('socket.io')
+const { Server } = require('http')
+const controllers = require('./controllers')
+const { classifyTweetWithBayes } = require('./lib/classifier')
 
-server.listen(process.env.PORT || 8080, () => { console.log('Server listening...') })
+const classifyTweet = util.promisify(classifyTweetWithBayes)
+const app = express()
+const server = Server(app)
+const io = socket(server)
 
 // Express only serves static assets in production
 if (process.env.NODE_ENV === 'production') {
-  app.use(cors())
   app.use(express.static('client/build'))
 }
+
+app.use(cors())
+app.use(logger('dev'))
+app.get('/api/v1/tweets', controllers.tweets.get)
 
 const client = new Twitter({
   consumer_key: process.env.CONSUMER_KEY,
@@ -37,46 +45,21 @@ io.on('connection', (socket) => {
   socket.on('error', (error) => {
     console.error('New socket Error', error)
   })
-
-  stream.on('data', function (data) {
-    let tweet = {}
-    if (data.lang === 'en') {
-      classifyTweet(data.text).then((classifications) => {
-        tweet['id'] = data.id_str
-        tweet['classifications'] = classifications
-        tweet['text'] = data.text
-        socket.emit('tweet', tweet)
-      }).catch(err => console.error(err))
-    }
-  })
 })
 
-stream.on('data', function (data) {
-  let tweet = {}
+stream.on('data', async (data) => {
+  const tweet = {}
   if (data.lang === 'en') {
-    classifyTweet(data.text).then((classifications) => {
+    try {
+      const classifications = await classifyTweet(data.text)
       tweet['id'] = data.id_str
-      tweet['classifications'] = classifications
-      tweet['text'] = data.text
-      console.log(tweet)
-      // socket.emit('tweet', tweet);
-    }).catch(err => console.error(err))
+      tweet['first_class'] = classifications[0]
+      tweet['second_class'] = classifications[1]
+      await controllers.tweets.addTweet(tweet)
+    } catch (err) {
+      console.error(err)
+    }
   }
 })
 
-function classifyTweet (text) {
-  return new Promise((resolve, reject) => {
-    BayesClassifier.load('classifier.json', null, (err, classifier) => {
-      if (err)reject(err)
-      text = removeHash(text)
-      let classifications = []
-      let result = classifier.getClassifications(text)
-      classifications.push(result[0].label); classifications.push(result[1].label)
-      resolve(classifications)
-    })
-  })
-}
-
-const removeHash = (word) => {
-  return word.replace(/#|RT|rt/g, '')
-}
+server.listen(process.env.PORT || 8080, () => console.log('Server listening...'))

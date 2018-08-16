@@ -3,15 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "prop-types": "^15.6.1",
+    "react": "^16.4.1",
+    "react-content-loader": "^3.1.2",
+    "react-dom": "^16.4.1",
     "react-redux": "^5.0.6",
-    "react-scripts": "1.0.11",
+    "react-scripts": "1.1.4",
     "react-twitter-widgets": "^1.7.1",
-    "redux": "^3.7.2",
+    "redux": "^4.0.0",
     "redux-thunk": "^2.2.0",
-    "socket.io": "^2.0.3",
-    "socket.io-client": "^2.0.3",
+    "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1",
     "twitter": "^1.7.1"
   },
   "scripts": {
