@@ -9,11 +9,7 @@ export default class Tweets extends React.Component {
     this.state = {
       fetching: true,
       tweets: [],
-      page: {
-        currentPage: 0,
-        nextPage: 0,
-        totalPages: 0
-      }
+      page: 0
     }
   }
 
@@ -46,17 +42,14 @@ export default class Tweets extends React.Component {
   }
 
   async fetchNextTweets () {
-    const { currentPage, nextPage } = this.state.page
     this.setFetchingState(true)
-    const tweets = await fetchTweets(nextPage)
+    const tweets = await fetchTweets(this.state.page)
     if (tweets) {
       this.updateTweetsList(tweets)
       this.setFetchingState(false)      
-      this.updateTweetsPage({
-        currentPage: nextPage,
-        nextPage: currentPage + 1,
-        totalPages: currentPage + 1
-      })
+      this.setState((prevState, props) => ({
+        page: prevState.page + 1
+      }))
     }
   }
 
@@ -79,9 +72,9 @@ export default class Tweets extends React.Component {
     const { tweets, fetching } = this.state
 
     return (
-      <React.Fragment>
+      <div className="content">
         <EmbededTweet tweets={tweets} fetching={fetching} />
-      </React.Fragment>
+      </div>
     )
   }
 }

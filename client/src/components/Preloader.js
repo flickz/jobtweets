@@ -7,7 +7,7 @@ export default (props) => {
     <div className="content-loader">
       <ContentLoader
         height={160}
-        width={400}
+        width={500}
         speed={2}
         primaryColor="#f3f3f3"
         secondaryColor="#ecebeb"

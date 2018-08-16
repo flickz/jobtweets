@@ -47,12 +47,17 @@ exports.get = async function (req, res) {
   const page = parseInt(req.query.page)
 
   function getRange (page) {
-    const from = page * 10
+    let from
+    if (page === 0) {
+      from = page * 10
+    } else {
+      from = page * 10 + 1
+    }
     const to = (page + 1) * 10
     return [from, to]
   }
-
   const [from, to] = getRange(page)
+  console.log(from, to)
 
   try {
     const tweets = await getTweets(from, to)

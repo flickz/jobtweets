@@ -47,19 +47,19 @@ io.on('connection', (socket) => {
   })
 })
 
-// stream.on('data', async (data) => {
-//   const tweet = {}
-//   if (data.lang === 'en') {
-//     try {
-//       const classifications = await classifyTweet(data.text)
-//       tweet['id'] = data.id_str
-//       tweet['first_class'] = classifications[0]
-//       tweet['second_class'] = classifications[1]
-//       const result = await controllers.addTweet(tweet)
-//     } catch (err) {
-//       logger.error(err)
-//     }
-//   }
-// })
+stream.on('data', async (data) => {
+  const tweet = {}
+  if (data.lang === 'en') {
+    try {
+      const classifications = await classifyTweet(data.text)
+      tweet['id'] = data.id_str
+      tweet['first_class'] = classifications[0]
+      tweet['second_class'] = classifications[1]
+      await controllers.tweets.addTweet(tweet)
+    } catch (err) {
+      console.error(err)
+    }
+  }
+})
 
 server.listen(process.env.PORT || 8080, () => console.log('Server listening...'))
